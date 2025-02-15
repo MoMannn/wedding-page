@@ -7,6 +7,7 @@ body {
     background-color: #faf7f7;
     color: #2c2c2c;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Hero section */
@@ -65,21 +66,22 @@ section h2 {
 #timeline {
     background-color: #fff;
     position: relative;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+#timeline h2 {
+    margin-bottom: 20px; /* Add space below the heading */
 }
 
 #timeline ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
-}
-
-#timeline li {
-    position: relative;
-    padding: 20px 0;
-    width: 400px;
-    margin: 0 auto;
-    text-align: left;
+    text-align: left; /* Keep text left-aligned */
+    max-width: 400px; /* Set a max width for the list */
+    width: 100%; /* Allow it to take full width */
 }
 
 #directions {
@@ -114,9 +116,7 @@ section h2 {
 }
 
 .gifts-image {
-    max-width: none; /* Prevent resizing */
-    width: auto; /* Keep original width */
-    height: auto; /* Maintain the aspect ratio */
+    height: overflow; /* Maintain aspect ratio */
     display: block; /* Ensure it behaves like a block element */
     position: absolute; /* Position the image absolutely */
     bottom: 0; /* Align the image to the bottom of the hero section */
@@ -261,7 +261,7 @@ section::before {
 
 .direction-item {
     flex: 1; /* Allow items to grow and fill the space */
-    min-width: 300px; /* Minimum width for each column */
+    min-width: 250px; /* Set a reasonable minimum width */
     margin: 10px; /* Space between columns */
 }
 
@@ -269,6 +269,19 @@ section::before {
 @media (max-width: 768px) {
     .directions-container {
         flex-direction: column; /* Stack items vertically on mobile */
+    }
+}
+
+/* Media query for smaller mobile devices */
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 6.4em; /* Reduce font size by 20% from 8em */
+        padding-top: 0vh; /* Adjust padding if necessary */
+    }
+
+    .hero .wedding-date {
+        font-size: 2.4em; /* Reduce font size by 20% from 3em */
+        margin-top: 8px; /* Adjust margin if necessary */
     }
 }
 

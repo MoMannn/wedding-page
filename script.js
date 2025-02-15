@@ -1,15 +1,3 @@
-function initMap() {
-    var location = { lat: 40.7128, lng: -74.0060 }; // Example coordinates
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: location
-    });
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-
 
     // Set the date we're counting down to
     const countDownDate = new Date("June 28, 2025 00:00:00").getTime();
