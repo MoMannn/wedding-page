@@ -150,7 +150,7 @@ section::before {
     }
 
     h1 {
-        padding-top: 15vh;
+        padding-top: 10vh;
     }
 }
 
@@ -211,13 +211,6 @@ section::before {
     font-family: 'Italianno', cursive;
     font-weight: 400;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
-}
-
-/* Media query for screens smaller than 1200px */
-@media (max-width: 1200px) {
-    .wedding-date {
-        right: 20px; /* Position 20px from the right edge of the screen */
-    }
 }
 
 .countdown {
