@@ -152,6 +152,13 @@ section::before {
     h1 {
         padding-top: 10vh;
     }
+    
+    /* Make iframe responsive on mobile */
+    iframe {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
 }
 
 .additional-info {
